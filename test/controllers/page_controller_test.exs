@@ -37,6 +37,10 @@ defmodule TecLab_2.PageControllerTest do
           |> Enum.sort
           |> Enum.each(fn(row) -> Redis.lpush('number', row) end)
 
+        IO.inspect 'File 1'
+        IO.inspect list_number
+        IO.inspect list_string
+
         assert true
 
       else
@@ -84,6 +88,10 @@ defmodule TecLab_2.PageControllerTest do
           |> Enum.sort
           |> Enum.each(fn(row) -> Redis.lpush('number', row) end)
 
+        IO.inspect 'File 2'
+        IO.inspect list_number
+        IO.inspect list_string
+
         assert true
 
       else
@@ -129,6 +137,10 @@ defmodule TecLab_2.PageControllerTest do
           |> Enum.uniq
           |> Enum.sort
           |> Enum.each(fn(row) -> Redis.lpush('number', row) end)
+
+        IO.inspect 'File 3'
+        IO.inspect list_number
+        IO.inspect list_string
 
         assert true
 
