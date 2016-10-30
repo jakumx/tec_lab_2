@@ -18,15 +18,15 @@ defmodule TecLab_2.PageControllerTest do
         list_string = list_string_to_redis(list_file_string, list_redis_string)
         list_number = list_number_to_redis(list_file_number, list_redis_number)
 
-        IO.inspect 'File 1'
+        IO.inspect "-------- File 1"
 
-        assert list_number == :ok && list_string == :ok
+        assert list_number == :ok && list_string == :ok, "File 1 problem insert data"
 
       else
-        assert is_bitstring(body) && String.valid?(body)
+        assert is_bitstring(body) && String.valid?(body), "File 1 no valid content"
       end
     else
-      assert resp_code == 200 && resp_ok == 'OK'
+      assert resp_code == 200 && resp_ok == 'OK', "File 1 not found"
     end
 
   end
@@ -48,15 +48,15 @@ defmodule TecLab_2.PageControllerTest do
         list_string = list_string_to_redis(list_file_string, list_redis_string)
         list_number = list_number_to_redis(list_file_number, list_redis_number)
 
-        IO.inspect 'File 2'
+        IO.inspect "-------- File 2"
 
-        assert list_number == :ok && list_string == :ok
+        assert list_number == :ok && list_string == :ok, "File 2 problem insert data"
 
       else
-        assert is_bitstring(body) && String.valid?(body)
+        assert is_bitstring(body) && String.valid?(body), "File 2 no valid content"
       end
     else
-      assert resp_code == 200 && resp_ok == 'OK'
+      assert resp_code == 200 && resp_ok == 'OK', "File 2 not found"
     end
   end
 
@@ -77,15 +77,15 @@ defmodule TecLab_2.PageControllerTest do
         list_string = list_string_to_redis(list_file_string, list_redis_string)
         list_number = list_number_to_redis(list_file_number, list_redis_number)
 
-        IO.inspect 'File 3'
+        IO.inspect "-------- File 3"
 
-        assert list_number == :ok && list_string == :ok
+        assert list_number == :ok && list_string == :ok, "File 3 problem insert data"
 
       else
-        assert is_bitstring(body) && String.valid?(body)
+        assert is_bitstring(body) && String.valid?(body), "File 3 no valid content"
       end
     else
-      assert resp_code == 200 && resp_ok == 'OK'
+      assert resp_code == 200 && resp_ok == 'OK', "File 3 not found"
     end
   end
 
